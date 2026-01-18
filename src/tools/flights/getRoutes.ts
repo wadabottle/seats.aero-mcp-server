@@ -15,6 +15,7 @@ export async function getRoutesTool(args: GetRoutesParams) {
             text: 'Error: SEATS_API_KEY environment variable is not set',
           },
         ],
+        isError: true,
       };
     }
 
@@ -40,6 +41,7 @@ export async function getRoutesTool(args: GetRoutesParams) {
             text: `Error with seats.aero API (${routes.status}): ${errorText}`,
           },
         ],
+        isError: true,
       };
     }
 
@@ -74,6 +76,7 @@ export async function getRoutesTool(args: GetRoutesParams) {
           }`,
         },
       ],
+      isError: true,
     };
   }
 }
