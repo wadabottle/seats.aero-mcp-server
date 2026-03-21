@@ -25,6 +25,7 @@ const getBulkAvailTool = async (params: GetBulkAvailParams) => {
             text: 'Error: SEATS_API_KEY environment variable is not set',
           },
         ],
+        isError: true,
       };
     }
 
@@ -59,6 +60,7 @@ const getBulkAvailTool = async (params: GetBulkAvailParams) => {
             text: `Error with seats.aero API (${bulkAvail.status}): ${errorText}`,
           },
         ],
+        isError: true,
       };
     }
 
@@ -97,6 +99,7 @@ const getBulkAvailTool = async (params: GetBulkAvailParams) => {
           }`,
         },
       ],
+      isError: true,
     };
   }
 };
